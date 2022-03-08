@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooting Game</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <h1 class="game_name">Shooting Game</h1>
+    <div class="player_details">
+        <div class="player_details_player1">
+            <span class="player_name"> Player 1 </span>
+            <span> score : <span class="player__1_score">0</span> </span>
+        </div>
+        <div class="player_details_player2">
+            <span class="player_name"> Player 2 </span>
+            <span> score : <span class="player__2_score">0</span> </span>
+        </div>
+    </div>
+    <div class="game_container">
+        <div class="player__1">
+            <div class="player__1_shooter">
+                <button class="player__1_shooter_trigger" disabled><span>Shoot</span></button>
+                <div class="player__1_shooter_head"></div>
+                <div class="player__1_bullet"></div>
+            </div>
+            <div class="health_indicator">
+                <span>Health</span>
+                <span class="player__1_health">5</span>
+                <span>%</span>
+            </div>
+        </div>
+        <div class="play_status">Press Start to start the game</div>
+        <div class="player__2">
+            <div class="player__2_shooter">
+                <div class="player__2_shooter_head"></div>
+                <div class="player__2_bullet"></div>
+                <button class="player__2_shooter_trigger" disabled><span>Shoot</span></button>
+            </div>
+            <div class="health_indicator">
+                <span>Health</span>
+                <span class="player__2_health">5</span>
+                <span>%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="button_start">
+        <button class="start_button">Start Game</button>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

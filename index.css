@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game_name {
+  text-align: center;
+  color: greenyellow;
+  font-size: 3rem;
+}
+
+.player_details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player_details > span {
+  font-size: 30px;
+}
+
+.game_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.player__1,
+.player__2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.player__2 {
+  align-items: flex-end;
+}
+
+.player__1_shooter_head {
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-left: 70px solid green;
+}
+
+.player__2_shooter_head {
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-right: 70px solid blue;
+}
+
+.player__1_shooter,
+.player__2_shooter {
+  display: flex;
+  align-items: center;
+}
+
+/* button {
+  height: 70px;
+} */
+
+.player__1_health,
+.player__2_health {
+  margin-top: 10%;
+}
+
+.button_start {
+  display: flex;
+  justify-content: center;
+}
+
+.player__1_shooter_trigger,
+.player__2_shooter_trigger {
+  display: inline-block;
+  background-color: #7b38d8;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.player__1_shooter_trigger span,
+.player__2_shooter_trigger span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.player__1_shooter_trigger span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.player__1_shooter_trigger:hover span {
+  padding-right: 25px;
+}
+
+.player__1_shooter_trigger:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.player__2_shooter_trigger span:before {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 85px;
+  transition: 0.5s;
+}
+
+.player__2_shooter_trigger:hover span {
+  padding-left: 25px;
+}
+
+.player__2_shooter_trigger:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+/* Bullet Animation */
+.player__1_bullet {
+  width: 40px;
+  height: 40px;
+  background: green;
+  animation-duration: 1s;
+  /* animation-name: player1_bullet; */
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  position: absolute;
+  left: -10%;
+}
+
+@keyframes player1_bullet {
+  0% {
+    opacity: 0;
+    left: 0%;
+  }
+  100% {
+    opacity: 1;
+    left: 95%;
+  }
+}
+
+.player__2_bullet {
+  width: 40px;
+  height: 40px;
+  background: blue;
+  animation-duration: 1s;
+  /* animation-name: player2_bullet; */
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  position: absolute;
+  right: 5%;
+  opacity: 0;
+}
+
+@keyframes player2_bullet {
+  0% {
+    opacity: 0;
+    right: 5%;
+  }
+  100% {
+    opacity: 1;
+    right: 95%;
+  }
+}
+
+button:disabled {
+  background-color: grey;
+}
+
+.play_status {
+  font-size: 60px;
+}
+
+.start_button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  margin-top: -5%;
+}
+
+.player_details,
+.health_indicator {
+  font-size: 2rem;
+}
