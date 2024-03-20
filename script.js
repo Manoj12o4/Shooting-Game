@@ -11,7 +11,7 @@ let playStatus = document.querySelector('.play_status')
 
 class Player {
     constructor() {
-        this.health = 5
+        this.health = 10
         this.score = 0
     }
     resetScore() {
@@ -25,7 +25,7 @@ class Player {
         return this.health
     }
     resetHealth() {
-        this.health = 5
+        this.health = 10
         return this.health
     }
 }
